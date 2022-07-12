@@ -1,11 +1,14 @@
 import datetime as dt
 import random
-
 import pandas as pd
 import smtplib
+import os
+from dotenv import load_dotenv
 
-id = "itsmayankinbox@gmail.com"
-key = "ogzdfxfvsntnoifj"
+load_dotenv()
+
+id = os.getenv("email_id")
+key = os.getenv("password")
 
 month = dt.datetime.today().date().month
 day = dt.datetime.today().date().day
